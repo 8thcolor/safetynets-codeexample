@@ -9,7 +9,6 @@ class Invoice
   end
 
   def calculate_total
-    @total = 0 # test fail if forgotten
     @items.each do |item|
       @total += item.price * item.quantity
     end
