@@ -5,7 +5,17 @@ safetynets-codeexample
 Error in computation
 
 # Static Analysis
-Complexity or Duplication? (easy to show case in command line using flay/flog)
+
+* Example of an InternationInvoice with flog score > 15
+* Easy to run flog so see it
+* Then we need a quote... which also need a VAT
+* Easy to run flay to see it
+* Good opportunity to talk about thresold (when is it too much ?)
 
 # Code Review
-Extract code to proper place
+Refactoring example:
+
+* Extract VAT to module
+* Extract Country to own class
+
+-> eliminate duplication, reduce complexity

@@ -1,21 +1,11 @@
-class InternationalInvoice
-  
-  def initialize(country_code, vat_number = nil)
-    @items = []
+class Quote
+  def initialize(total, country_code, vat_number = nil)
     @total = 0
     @country_code = country_code
     @vat_number = vat_number
   end
-
-  def add_item(item)
-    @items << item
-  end
-
+  
   def calculate_total
-    @items.each do |item|
-      @total += item.price * item.quantity
-    end
-
     if @country_code == 'BE'
        vat = 0.21 * @total
     elsif ['IT','FR','NL','LU','DE'].include?(@country_code)
